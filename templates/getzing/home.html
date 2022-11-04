@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />>
+<head>
+    <meta charset="utf-8">
+    <title>Proof of concept</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="WuA/iV6DMn2QsCwWtHBdk2DHBzTA/mKUc1bZxXZC8bWH+30M1DX/WUSexlJZYLT3KuHhjIgYpDdjHj1f2Eg4wA==" />
+
+    <meta name="app-version" content="2.2.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!--<link rel="canonical" href="index.html"/>-->
+    <meta property="og:type" content="website">
+    <meta property="fb:app_id" content="420325201718783">
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" media="all" href="{{ url_for('static',filename='getzing/assets/application-90817b4a5576e091c1cebe013b7266f268932ad74ba07fb319ddb334f1f460ec.css')}}" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static',filename='getzing/assets/logo512-c1d349894f3b9159faa1563fcf0efb5192623578fe0c6e23590db309f652ff8a.png')}}" />
+
+
+
+    
+  </head>
+  <body id="barba-wrapper" class="">
+    <div id="transition-page" style="display: none;">
+      <div class="navbar navbar-default navbar-fixed-top" style="position: absolute;">
+        <div class="navbar-header block-header">
+          <div class="activity-header">
+            <div class="header-box">
+              <div class="item-box-content">
+                <div class="prominent-header">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 100vh; width: 100%;">
+        <div class="item-box-content">
+          <div class="text-center">
+            <i class="fa fa-spinner fa-spin app-color fa-3x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="transition-header" style="display: none;">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header block-header">
+          <div class="activity-header">
+            <div class="header-box">
+              <div class="item-box-content">
+                <div class="prominent-header">
+                  <i class="fa fa-spinner fa-spin"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="transition-body" style="display: none;">
+      <div style="height: 100vh; width: 100%;">
+        <div class="item-box-content">
+          <div class="text-center">
+            <i class="fa fa-spinner fa-spin app-color fa-3x"></i>
+            <div class="loading-msg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="barba-container  extra-padding-sm-down hide-barcode-scanner" data-namespace="loggedOutSpace" data-keep-awake="false">
+        
+        
+<div class="navbar navbar-default navbar-fixed-top" id="site-top-navbar">
+
+      <div class="navbar-submenu visible-xs visible-sm" id="barba-tabs">
+      <div class="navbar-submenu-item active" data-toggle="tab" data-target="#routine-settings">
+          <i class="fa fa-filter"></i> Settings
+</div>      <div class="navbar-submenu-item " data-toggle="tab" data-target="#routine-options">
+          <i class="fa fa-hand-o-up"></i> Pick Routine
+</div>    </div>
+
+  <div id="notifier" class="">
+    <div class="notifier-msg">
+      Saved!
+    </div>
+  </div>
+</div>
+
+    <div id="get-app-wrapper" style="display: none;">
+      <div class="text-right faint-color"><div id="hide-app-store-btns" class="inline-elem p10"><i class="fa fa-remove fa-2x"></i></div></div>
+      <div id="get-app-panel">
+        <div class="get-app-btns">
+  
+</div>
+      </div>
+    </div>
+    
+
+<div class="off-canvas-menu list-group" id="menu-content">
+  <div class="list-group">
+        <div class="list-group-item text-left clickable">
+          <i class="fa fa-chevron-right fa-fw"></i>
+        </div>
+        <a class="list-group-item" href="app/start/1.html">
+          <i class="fa fa-user-plus fa-fw"></i> Sign Up
+</a>        <a class="list-group-item use-barba" data-target-namespace="loggedOutSpace" href="get_app.html">
+            <i class="fa fa-mobile fa-fw"></i> Get the App
+</a>        <a class="list-group-item use-barba" data-target-namespace="loggedOutSpace" href="workout_splits.html">
+            <i class="icon icon-dumbell fa-fw"></i> Routines
+</a>        <a class="list-group-item" href="trainer_landing.html">
+          <i class="icon icon-award-light fa-fw"></i> For Professionals
+</a>        <a class="list-group-item" href="app/strength_level.html">
+            <i class="fa fa-pie-chart fa-fw"></i> Strength/Body Stats
+</a>        <a class="list-group-item use-barba" data-target-namespace="loggedOutSpace" href="meals.html">
+            <i class="fa fa-calendar fa-fw"></i> Meal Browser
+</a>        <a class="list-group-item use-barba" data-target-namespace="loggedOutSpace" href="help.html">
+            <i class="fa fa-question-circle fa-fw"></i> Help
+</a>        <a class="list-group-item" href="app/contact.html">
+            <i class="fa fa-envelope fa-fw"></i> Contact/Feedback
+</a>        <a class="list-group-item" href="affiliate_program.html">
+          <i class="icon-users-light"></i> Affiliate Program
+</a>        <a class="list-group-item use-barba" data-target-namespace="loggedOutSpace" href="blog.html">
+            <i class="fa fa-rss fa-fw"></i> Blog
+</a>        <a class="list-group-item" href="app/login.html">
+            <i class="fa fa-sign-in fa-fw"></i> Sign In
+</a>  </div>
+</div>
+
+
+  
+  <div id="main" class="container no-padding">
+
+      
+
+
+<div class="row tab-content responsive-tabs">
+  <div class="col-xs-12">
+    <div class="ml5 mr5">
+      
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-6 tab-pane fade active in" id="routine-settings">
+    <div class="ml5 mr5">
+      <div class="app-section-heading hidden-sm hidden-xs">
+        Settings
+      </div>
+      <form id="workout-settings-form" class="unlogged form-horizontal ajax-form auto-submit instant-submit panel-item rounded" action="{{ url_for('home')}}" accept-charset="UTF-8" method="post">
+    <div class="form-inputs">
+
+      <div class="form-group">
+        <div class="col-md-12">
+
+          <div class="ml10 mb10">
+            <div class="inline-text-block">
+              <label>Goals</label>
+              <div>
+                <select class="form-control parent-field"   name="goals" ><option selected="selected" value="-1">select a goal</option>
+<option value="0">Health</option>
+
+                </select>
+              </div>
+            </div>
+          </div>
+          <div id="needs-cardio-field" class="ml10 mb10" style="">
+  
+ 
+
+
+
+
+
+
+
+<label for="weight_loss_method">Area of interest (Health)</label>
+  <div>
+    <select class="form-control parent-field" name="area_of_interest" ><option selected="selected" value="1">Select your health area of interest</option>
+<option value="0">pysical fitness</option>
+<option value="2">diet</option>
+<option value="3">pregnancy</option>
+<option value="4">old age</option>
+</select>
+  </div>
+
+
+
+
+
+
+</div>
+
+<button type="submit">submit</button>
+          
+          
+
+          
+
+          
+
+          
+
+        
+
+        </div>
+      </div>
+    </div>
+  
+</form>
+
+    </div>
+  </div>
+
+  <div class="col-xs-12 col-md-6 tab-pane fade " id="routine-options">
+    <div class="app-section-heading hidden-sm hidden-xs">
+      <p>Recommandations<p>
+      <span class="record-gallery-text top"><p>a new page will Recommandations results<p></span>
+    </div>
+    
+
+    <div id="routine-picker-list">
+      <ul class="record-gallery narrow" id="possible-routines-listing">
+    <li>
+      
+  
+         
+  
+
+
+  
+      
+      
+         
+
+
+
+
+
+    <div id="routine-info-modal-184077" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> Metallicadpa PPL</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                A beginner routine with six days a week of lifting and a focus on barbell lifts. Two lower body workouts, two pull workouts, and two push workouts per week. The routine is very popular on reddit&#39;s 6 million member fitness community and many people there have seen excellent progress with it.
+          </div>
+              <a class="link-as-div panel-clickable p10 med-quarter info-color text-center slight-top-border" target="_blank" href="https://www.reddit.com/r/Fitness/comments/37ylk5/a_linear_progression_based_ppl_program_for/">
+                  <i class="fa fa-link"></i> Source
+</a>
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_184077" value="184077" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-182800" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> Three-day Full Body</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                A simple three-day a week lifting routine with a focus on barbell lifts like squat, deadlift, and bench press. Ideal for beginners who want to build a great physique and get stronger.
+          </div>
+
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_182800" value="182800" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-182531" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> Twice-a-week Gym Routine</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                A two-day a week full body lifting routine with a focus on barbell lifts like squat, deadlift, and bench press. Ideal for building a great physique and getting stronger if you can only get to the gym a couple times a week.
+          </div>
+
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_182531" value="182531" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-183967" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i>okkk</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                Six days a week of lifting with a focus on barbell lifts. Two lower body workouts, two pull workouts, and two push workouts per week. The ideal setup for anyone who wants to train 6 days/week and build a great physique (as well as getting stronger). Also allows for the possibility of shorter workouts with similar results to less frequent routines since the work is split over so many days.
+          </div>
+
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_183967" value="183967" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-182444" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> Five-day PPL Split</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                Five days a week of lifting with a focus on barbell lifts. Two lower body workouts, two pull workouts, and two push workouts that get rotated through every 6 lifting days. The ideal setup for anyone who wants to train 5 days/week and build a great physique (as well as getting stronger). Also allows for the possibility of shorter workouts with similar results to less frequent routines since the work is split over so many days.
+          </div>
+
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_182444" value="182444" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-183942" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> Greyskull LP</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                A simple, popular, and proven beginner routine with a focus on full body barbell lifts like bench press, squat, and deadlift. The routine is focused on strength, but it&#39;s also suitable for building muscle and/or getting toned assuming you follow your meal plan.
+          </div>
+              <a class="link-as-div panel-clickable p10 med-quarter info-color text-center slight-top-border" target="_blank" href="https://www.reddit.com/r/Fitness/wiki/phraks-gslp">
+                  <i class="fa fa-link"></i> Source
+</a>
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_183942" value="183942" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+    <div id="routine-info-modal-184065" class="modal fade routine-info-modal ">
+      <div class="modal-dialog small-modal">
+        <div class="modal-content rounded-modal">
+          <div class="slight-bottom-border text-center" style="height: 35px;">
+            <label class="pl5 pt10"><i class="icon icon-dumbell"></i> AllPro Routine</label>
+            <button type="button" class="close p5" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="p10 text-justify">
+                A simple and effective beginner barbell routine that automatically cycles and progresses based on your performance. The focus of the routine is aesthetics, so it will work great for building muscle or losing fat assuming you follow your meal plan, but you&#39;ll also get stronger in the process. Designed and popularized by the bodybuilding.com community.
+          </div>
+              <a class="link-as-div panel-clickable p10 med-quarter info-color text-center slight-top-border" target="_blank" href="https://forum.bodybuilding.com/showthread.php?t=4195843">
+                  <i class="fa fa-link"></i> Source
+</a>
+          <div class="pb10 pt10 slight-top-border text-center">
+                <div class="btn-elem btn modal-action routine-modal-submit" data-dismiss="modal-go" data-target="#routine-picker-form">
+                    <input type="radio" name="user[new_routine]" id="user_new_routine_184065" value="184065" />
+                    <i class="fa fa-check"></i> Pick
+</div>            <a class="btn modal-action secondary" data-dismiss="modal">
+                <i class="fa fa-ban"></i>
+                Cancel
+</a>          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div id="unpossible-routines-modals">
+</div>
+
+    </div>
+
+</form>
+  </div>
+
+</div>
+      <div id="loading-modal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+
+        <div class="placeholder-pane"></div>
+        
+    </div>
+
+    <div id="barba-error-page" style="position: fixed; top: 0; left: 0; z-index: -9999;">
+      <div class="container no-padding">
+        <div class="app">
+          <div id="deviceready" style="padding-right: 15px; padding-left: 15px;">
+
+            <div id="barba-404-error" class="barba-status">
+              <div class="error-msg">
+                404: Uh-oh, looks like that page doesn't exist...
+              </div>
+
+              <div class="mt20">
+                <div class="btn btn-default btn-green btn-flat border-none error-back-btn">
+                    Back
+</div>                <a class="btn btn-default btn-green btn-flat border-none use-barba" data-barba-transition="retry-transition" data-target-namespace="landingSpace" href="index.html">
+                  Go to Home Page
+</a>              </div>
+            </div>
+
+            <div id="barba-503-error" class="barba-status">
+              <div class="error-msg">
+                Strongr Fastr's servers are currently unavailable, either due to maintenance or unusually high load. Please wait a few minutes and try again...
+              </div>
+
+              <div class="mt20">
+                <div class="btn btn-default btn-green btn-flat border-none barba-retry">
+                  Try Again
+                </div>
+              </div>
+            </div>
+
+            <div id="barba-500-error" class="barba-status">
+              <div  class="error-msg">
+                Uh-oh, looks like something went wrong. Please let us know if this problem persists...
+              </div>
+
+              <div class="mt20">
+                <div class="btn btn-default btn-green btn-flat border-none error-back-btn">
+                    Back
+</div>                <a class="btn btn-default btn-green btn-flat border-none use-barba" data-barba-transition="retry-transition" data-target-namespace="landingSpace" href="index.html">
+                    Restart App
+</a>              </div>
+            </div>
+
+            <div id="barba-connect-error" class="barba-status">
+              <div  class="status-msg">
+                Can't connect to Strongr Fastr's servers. Check your internet connection...
+              </div>
+
+              <div class="mt20">
+                <div class="btn btn-default btn-green btn-flat border-none barba-retry">
+                  Try Again
+                </div>
+              </div>
+            </div>
+
+            <div id="barba-retrying"  class="barba-status">
+              <i class="fa fa-spinner fa-spin app-color fa-3x"></i>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </body>
+</html>
